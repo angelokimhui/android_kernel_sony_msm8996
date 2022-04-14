@@ -41,7 +41,7 @@
 		fstab {
 			vendor {
 				dev = "/dev/block/platform/soc/7464900.sdhci/by-name/oem";
-				status = "disabled";
+				status = "ok";
 			};
 			system {
 				compatible = "android,system";
