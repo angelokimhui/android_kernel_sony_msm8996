@@ -529,8 +529,10 @@ static struct kobj_type sugov_tunables_ktype = {
 };
 
 /********************** cpufreq governor interface *********************/
-
-static struct cpufreq_governor blu_schedutil_gov;
+#ifndef CONFIG_CPU_FREQ_DEFAULT_GOV_BLU_SCHEDUTIL
+static
+#endif
+struct cpufreq_governor blu_schedutil_gov;
 
 static struct sugov_policy *sugov_policy_alloc(struct cpufreq_policy *policy)
 {
