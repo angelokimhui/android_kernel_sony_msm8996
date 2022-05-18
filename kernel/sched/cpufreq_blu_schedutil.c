@@ -822,13 +822,6 @@ struct cpufreq_governor blu_schedutil_gov = {
 	.owner = THIS_MODULE,
 };
 
-#ifdef CONFIG_CPU_FREQ_DEFAULT_GOV_BLU_SCHEDUTIL
-struct cpufreq_governor *cpufreq_default_governor(void)
-{
-	return &blu_schedutil_gov;
-}
-#endif
-
 static int __init sugov_register(void)
 {
 	return cpufreq_register_governor(&blu_schedutil_gov);
